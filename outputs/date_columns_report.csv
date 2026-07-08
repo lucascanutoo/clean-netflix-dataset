@@ -1,0 +1,3 @@
+column,original_dtype,converted_column,converted_dtype,missing_before,nat_after_conversion,min_date,max_date,treatment
+date_added,str,date_added_datetime,datetime64[us],10,10,2008-01-01,2021-09-25,Convertida com pd.to_datetime; datas ausentes/invalidas permanecem como NaT.
+release_year,int64,,,0,,,,"Mantida como ano numerico, pois nao contem mes e dia para formar data completa."

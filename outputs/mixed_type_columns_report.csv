@@ -1,0 +1,2 @@
+column,issue,treatment,new_columns
+duration,"Valores combinavam numero e unidade no mesmo texto, como '90 min' e '2 Seasons'.",Criadas duration_value como numero inteiro e duration_unit como unidade padronizada.,"duration_value, duration_unit"

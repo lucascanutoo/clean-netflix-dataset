@@ -1,0 +1,13 @@
+column,missing_before,missing_before_pct,missing_after,treatment
+show_id,0,0.0,0,Sem ausentes; mantida.
+type,0,0.0,0,Sem ausentes; mantida.
+title,0,0.0,0,Sem ausentes; mantida.
+director,2634,29.91,0,Ausentes preenchidos com 'Unknown'.
+cast,825,9.37,0,Ausentes preenchidos com 'Unknown'.
+country,831,9.44,0,Ausentes preenchidos com 'Unknown'.
+date_added,10,0.11,0,Ausentes preenchidos com Unknown na coluna original; datetime derivado usa NaT.
+release_year,0,0.0,0,Sem ausentes; mantida como ano numerico.
+rating,4,0.05,0,Valores de duracao deslocados para duration; ausentes preenchidos com Unknown.
+duration,3,0.03,0,Duracoes deslocadas de rating corrigidas; ausentes restantes preenchidos com Unknown.
+listed_in,0,0.0,0,Sem ausentes; mantida.
+description,0,0.0,0,Sem ausentes; mantida.
