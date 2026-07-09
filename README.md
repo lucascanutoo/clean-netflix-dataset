@@ -23,8 +23,6 @@ O dataset original possui:
 - 12 colunas originais.
 - Conteudos classificados como `Movie` ou `TV Show`.
 
-```
-
 Depois da limpeza, o dataset passa a ter 15 colunas, com as novas colunas:
 
 - `date_added_datetime`: versao convertida de `date_added` para data.
