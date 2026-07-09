@@ -1,7 +1,5 @@
 from pathlib import Path
-
 import pandas as pd
-
 
 DATA_PATH = Path("data/netflix_titles.csv")
 OUTPUT_DIR = Path("outputs")
@@ -10,7 +8,6 @@ CLEAN_PICKLE_PATH = OUTPUT_DIR / "netflix_titles_clean.pkl"
 MISSING_REPORT_PATH = OUTPUT_DIR / "missing_values_report.csv"
 MIXED_TYPE_REPORT_PATH = OUTPUT_DIR / "mixed_type_columns_report.csv"
 DATE_REPORT_PATH = OUTPUT_DIR / "date_columns_report.csv"
-
 
 def build_missing_report(before: pd.DataFrame, after: pd.DataFrame) -> pd.DataFrame:
     treatments = {
@@ -42,7 +39,6 @@ def build_missing_report(before: pd.DataFrame, after: pd.DataFrame) -> pd.DataFr
 
     return pd.DataFrame(rows)
 
-
 def build_mixed_type_report() -> pd.DataFrame:
     return pd.DataFrame(
         [
@@ -54,7 +50,6 @@ def build_mixed_type_report() -> pd.DataFrame:
             }
         ]
     )
-
 
 def build_date_report(before: pd.DataFrame, after: pd.DataFrame) -> pd.DataFrame:
     date_added_datetime = after["date_added_datetime"]
@@ -85,7 +80,6 @@ def build_date_report(before: pd.DataFrame, after: pd.DataFrame) -> pd.DataFrame
             },
         ]
     )
-
 
 def clean_netflix_titles(df: pd.DataFrame) -> pd.DataFrame:
     clean = df.copy()
@@ -124,7 +118,6 @@ def clean_netflix_titles(df: pd.DataFrame) -> pd.DataFrame:
 
     return clean
 
-
 def main() -> None:
     OUTPUT_DIR.mkdir(exist_ok=True)
 
@@ -152,7 +145,6 @@ def main() -> None:
     print(date_report.to_string(index=False))
     print("\nClean dtypes:")
     print(clean[["date_added_datetime", "release_year", "duration_value", "duration_unit"]].dtypes)
-
 
 if __name__ == "__main__":
     main()
